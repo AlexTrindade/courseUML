@@ -22,9 +22,6 @@ public class CategoriaResource {
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 		
 		Categoria obj = service.buscar(id);
-		if (obj == null) {
-			return ResponseEntity.ok("CATEGORY not found!!!!");
-		}
 		return ResponseEntity.ok(obj);
 	}
 	
